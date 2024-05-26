@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  body {
+    background-image: linear-gradient(to left,rgb(20, 54, 85),rgb(27, 41, 57));
+  }
+
+  h2 {
+    margin-top: 20%;
+    margin-bottom: 0%;
+    text-align: center;
+    color:  rgba(255, 255, 255, 0.718);
+    transition: 0.7s;
+  }
+
+  .formulario {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70%;
+    background: #2c3844a6;
+    padding: 5%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 7px 10px 30px #000000a7;
+    
+  }
+  
+  .cajas {
+    width: 100%;
+    background: #24303c;
+    padding: 2%;
+    border-radius: 8px;
+    margin-bottom: 15%;
+    border: 1px solid #1f54c583;
+    font-size: 0.9rem;
+    color: white;
+  }
+
+  .cajas:focus {
+    border: 1px solid red;
+    box-shadow: 3px 0 30px rgba(0, 0, 0, 0.541);
+  }
+
+  .label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .botones {
+    width: 100%;
+    background: #1f54c553;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 4%;
+    color: white;
+    margin: auto;
+    transition: 0.7s ease all;
+    cursor: pointer;
+  }
+
+  .botones:hover {
+    background-color: rgba(83, 141, 223, 0.225);
+    color: black;
+    box-shadow: 1px 0 10px rgba(0, 0, 0, 0.479);
+  }
+
+  @media screen and (max-width: 480px) {
+   
+    h2 {
+      font-size: 0.8rem;
+      transition: 0.7s ease all;
+    }
+
+    .cajas {
+      font-size: 12px;
+      transition: 0.7s ease all;
+    }
+
+    .label {
+      font-size: 12px;
+      transition: 0.7s ease all;
+    }
+
+    .botones {
+      font-size: 12px;
+      transition: 0.7s ease all;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+
+    h2 {
+      font-size: 1.5rem;
+      transition: 0.7s ease all;
+    }
+
+    .formulario {
+      grid-template-columns: 1fr 1fr;
+      grid-column: span 2;
+
+    }
+
+    .cajas {
+      font-size: 16px;
+      transition: 0.7s ease all;
+    }
+
+    .label {
+      font-size: 16px;
+      transition: 0.7s ease all;
+    }
+
+    .botones {
+      font-size: 16px;
+      transition: 0.7s ease all;
+      
+    }
+
+  }
+  
+  @media screen and (min-width: 1024px) {
+ 
+
+    h2 {
+      font-size: 2rem;
+      transition: 0.7s ease all;
+    }
+
+    .formulario {
+      grid-template-columns: 1fr 1fr;
+      grid-column: span 2;
+    }
+
+    .cajas {
+      font-size: 18px;
+      transition: 0.7s ease all;
+    }
+
+    .label {
+      font-size: 18px;
+      transition: 0.7s ease all;
+    }
+
+    .botones {
+      font-size: 18px;
+      transition: 0.7s ease all;
+    }
+    
+  }

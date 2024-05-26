@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tallersito</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <main>
         <h2>Formulario</h2>
-        <form id="formUsuario">
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario">
+        <form id="formUsuario" class="formulario">
+            <label for="usuario" class="label">Usuario:</label>
+            <input class="cajas" type="text" id="usuario" name="usuario" placeholder="Introduzca su nombre de usuario">
 
-            <label for="Contraseña">Contraseña:</label>
-            <input type="password" id="password" name="password">
+            <label for="Contraseña" class="label">Contraseña:</label>
+            <input class="cajas" type="password" id="password" name="password" placeholder="Introduzca su contraseña">
 
-            <input type="submit" value="Log In">
+            <input class="botones" type="submit" value="Log In">
+            <ul id="listaErrores"></ul>
         </form>
     </main>
 
-    <script src="./scripts.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
