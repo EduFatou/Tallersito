@@ -1,0 +1,26 @@
+.container{
+    width: 60%;
+    margin:auto;
+}
+.formulario{
+    font-family: inherit;
+    font-size: 100%;
+}
+fieldset {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+    margin:auto;
+  }
+label, input{
+    width: 50%;
+    margin: auto;
+}
+label {
+    margin-top:10px;
+}
+.submit{
+    width: 50px;
+    margin-top: 10px;
+}
