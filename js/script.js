@@ -1,40 +1,39 @@
-const formulario = document.querySelector('#formUsuario');
-const listaErrores = document.querySelector('#listaErrores');
-const name = document.querySelector('#usuario');
-const password = document.querySelector('#password');
-const inputs = document.querySelectorAll('#formUsuario input');
-const regEx = {
-    user: /^[a-zA-Z0-9\_\-]{4,16}$/,
-    password: /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/
-}
-const objValidar = {
-    user: false,
-    password: false
-}
-const validarFormulario = (evento) => {
-    switch (evento.target.name) {
-        case 'usuario':
-            (regEx.user.test(evento.target.value)){
+const listaNombres = [];
+const formulario = document.querySelector("#formulario");
+console.log(formulario)
 
-            } else {
-                
-            }
-        break;
-        case 'password':
+formulario.addEventListener("submit", (ev)=>{
+    ev.preventDefault();
+    const usuario = formulario.usuario.value;
+    console.log(usuario)
+    const password = formulario.password.value;
+    console.log(password)
+    verificar(usuario, password)
+})
 
-        break;
+const verificar = (valorName, valorPassword) => {
+    const errores = ["Realida lo siguiente: "]
+    const regExpName = /^([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+)(\s+([A-Za-zÑñÁáÉéÍíÓóÚú]+['\-]{0,1}[A-Za-zÑñÁáÉéÍíÓóÚú]+))*$/;
+    const regExpPassword = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+    /*Minimo 8 caracteres
+Al menos una letra mayúscula
+Al menos una letra minucula
+Al menos un dígito
+No espacios en blanco*/
+
+    if (!regExpName.test(valorName)) {
+        const alertName = "Introduce un nombre válido"
+        errores.push(alertName);
+    } 
+    if (!regExpPassword.test(valorPassword)){
+        const alerPassword = "Introduce una constraseña válida"
+        errores.push(alerPassword);
+    }
+    if (errores.length == 1){
+        alert(`Se ha guardado correctamente el siguiente usuario: \n ${valorName}`)
+        formulario.reset;
+    } else {
+        const respuestaErrores = errores.reduce((anterior, actual)=>  anterior + "\n" + actual);
+        alert(respuestaErrores)
     }
 }
-
-inputs.forEach((input) => {
-    input.addEventListener('keyup', validarFormulario);
-    input.addEventListener('blur', validarFormulario);
-});
-
-formulario.addEventListener('submit', (evento) => {
-    evento.preventDefault();
-
-
-});
-
-
