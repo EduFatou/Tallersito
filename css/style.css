@@ -1,11 +1,3 @@
-.container{
-    width: 60%;
-    margin:auto;
-}
-.formulario{
-    font-family: inherit;
-    font-size: 100%;
-}
 fieldset {
     position: relative;
     display:flex;
